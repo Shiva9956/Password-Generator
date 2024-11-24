@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3b3b98;
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
+  margin: 0;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container {
+  background-color: #23235b;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  width: 350px;
+  max-width: 100%;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.result-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.result-container:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+  overflow-y: scroll;
+  height: 100%;
+}
+
+#result::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.result-container .btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.result-container .btn:hover {
+  transform: scale(1.1);
+}
+
+.btn {
+  border: none;
+  background-color: #3b3b98;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4f4fc7;
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  animation: fadeInUp 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger the animation of settings */
+.setting:nth-child(1) { animation-delay: 0.1s; }
+.setting:nth-child(2) { animation-delay: 0.2s; }
+.setting:nth-child(3) { animation-delay: 0.3s; }
+.setting:nth-child(4) { animation-delay: 0.4s; }
